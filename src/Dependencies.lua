@@ -1,24 +1,17 @@
---
--- libraries
---
 Class = require 'lib/class'
 
 push = require 'lib/push'
 
--- used for timers and tweening
 Timer = require 'lib/knife.timer'
 
--- utility
 require 'src/StateMachine'
 require 'src/Util'
 
 require 'src/Constantes'
 
--- game pieces
 require 'src/Board'
 require 'src/Tile'
 
--- game states
 require 'src/states/BaseState'
 require 'src/states/BeginGameState'
 require 'src/states/GameOverState'
@@ -44,12 +37,9 @@ gTextures = {
 
 gFrames = {
     
-    -- divided into sets for each tile type in this game, instead of one large
-    -- table of Quads
     ['tiles'] = GenerateTileQuads(gTextures['main'])
 }
 
--- this time, we're keeping our fonts in a global table for readability
 gFonts = {
     ['small'] = love.graphics.newFont('fonts/font.ttf', 8),
     ['medium'] = love.graphics.newFont('fonts/font.ttf', 16),

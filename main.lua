@@ -1,4 +1,4 @@
-require 'src/Dependencies.lua'
+require 'src/Dependencies'
 
 love.graphics.setDefaultFilter('nearest', 'nearest')
 
