@@ -27,9 +27,7 @@ function love.load()
         ['high-scores'] = function() return HighScoreState() end,
         ['enter-high-score'] = function() return EnterHighScoreState() end,
     }
-    gStateMachine:change('start',{
-        highScores = loadHighScores()
-    })
+    gStateMachine:change('start')
 
     backgroundX = 0
 
